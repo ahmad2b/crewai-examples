@@ -1,0 +1,15 @@
+version: "0.1.0"
+name: multi-ai-agents-crewai
+services:
+  crewai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+
+volumes:
+  crewai:
+    driver: local
