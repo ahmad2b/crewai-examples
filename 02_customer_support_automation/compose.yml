@@ -1,7 +1,7 @@
 version: "0.1.0"
-name: research_and_write_article
+name: customer_support_automation
 services:
-  crewai:
+  api_customer_support:
     build:
       context: .
       dockerfile: Dockerfile.dev
@@ -11,5 +11,5 @@ services:
       - "8000:8000"
 
 volumes:
-  crewai:
+  api_customer_support:
     driver: local
