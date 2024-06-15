@@ -1,0 +1,15 @@
+version: "0.1.0"
+name: automate_event_planning
+services:
+  crew_api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+
+volumes:
+  crew_api:
+    driver: local
